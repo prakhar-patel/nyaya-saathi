@@ -1,0 +1,277 @@
+[
+ {
+  "id": "CPA-JURIS",
+  "topic": "consumer",
+  "tags": [
+   "consumer",
+   "refund",
+   "commission",
+   "forum",
+   "jurisdiction",
+   "value",
+   "court"
+  ],
+  "text": "Consumer Protection Act, 2019: a complaint goes to the District Consumer Disputes Redressal Commission if the price paid for the goods/service is up to Rs 50 lakh, to the State Commission if it is above Rs 50 lakh and up to Rs 2 crore, and to the National Commission above Rs 2 crore (Consumer Protection (Jurisdiction of the District Commission, the State Commission and the National Commission) Rules, 2021). Most everyday refund problems are District Commission matters. A lawyer is not compulsory to file.",
+  "source": "Consumer Protection Act, 2019; Jurisdiction Rules, 2021",
+  "verify": "Check pecuniary limits are unchanged"
+ },
+ {
+  "id": "CPA-LIMIT",
+  "topic": "consumer",
+  "tags": [
+   "limitation",
+   "time",
+   "late",
+   "years",
+   "old"
+  ],
+  "text": "Under Section 69 of the Consumer Protection Act, 2019, a complaint must normally be filed within two years from the date the cause of action arose. A Commission may accept a later complaint only if the person shows sufficient cause for the delay.",
+  "source": "Consumer Protection Act, 2019, s.69",
+  "verify": ""
+ },
+ {
+  "id": "CPA-FILE",
+  "topic": "consumer",
+  "tags": [
+   "file",
+   "online",
+   "portal",
+   "fee",
+   "cost"
+  ],
+  "text": "A consumer complaint can be filed online on the e-Jagriti portal (e-jagriti.gov.in), which replaced e-Daakhil from 1 January 2025, or in person at the District Commission. No fee is payable for District Commission claims up to Rs 5 lakh. Attach: proof of payment, order/invoice, messages or emails with the seller, and a copy of your written complaint to them.",
+  "source": "Consumer Protection Act, 2019; Consumer Disputes Redressal Commissions Rules, 2020; Department of Consumer Affairs (e-Jagriti)",
+  "verify": "Fees above Rs 5 lakh are not stated here; check the portal (sources disagree on higher slabs)",
+  "checked": "2026-11-08: portal name/date and nil fee up to Rs 5 lakh confirmed from several public sources"
+ },
+ {
+  "id": "NCH",
+  "topic": "consumer",
+  "tags": [
+   "helpline",
+   "1915",
+   "complaint",
+   "mediation",
+   "company"
+  ],
+  "text": "The National Consumer Helpline (call 1915, or WhatsApp 8800001915) registers complaints against companies and tries to get them resolved before you go to a Commission. Registering also creates a dated record of your complaint. Online: consumerhelpline.gov.in.",
+  "source": "Department of Consumer Affairs, Govt. of India",
+  "verify": "Confirm WhatsApp number"
+ },
+ {
+  "id": "ECOM-RULES",
+  "topic": "consumer",
+  "tags": [
+   "ecommerce",
+   "online",
+   "marketplace",
+   "amazon",
+   "flipkart",
+   "grievance",
+   "officer",
+   "refund",
+   "delivery"
+  ],
+  "text": "Under the Consumer Protection (E-Commerce) Rules, 2020, an e-commerce platform must publish a grievance officer's details, acknowledge a complaint within 48 hours and resolve it within one month. A platform must also process refunds for returned or cancelled orders within a reasonable period.",
+  "source": "Consumer Protection (E-Commerce) Rules, 2020",
+  "verify": ""
+ },
+ {
+  "id": "CPA-DEFICIENCY",
+  "topic": "consumer",
+  "tags": [
+   "defect",
+   "deficiency",
+   "service",
+   "refund",
+   "not delivered"
+  ],
+  "text": "The Consumer Protection Act, 2019 covers defective goods (Section 2(10)) and deficiency in service (Section 2(11)). Non-delivery after payment, refusal to refund a valid return, or a product materially different from what was promised can fall under these.",
+  "source": "Consumer Protection Act, 2019, s.2(10), s.2(11)",
+  "verify": ""
+ },
+ {
+  "id": "RENT-DEPOSIT",
+  "topic": "rent",
+  "tags": [
+   "rent",
+   "deposit",
+   "landlord",
+   "tenant",
+   "security",
+   "flat",
+   "house"
+  ],
+  "text": "There is no single central law fixing deposit rules; they depend mainly on the rent agreement and the rent law of your state. The Model Tenancy Act, 2021 (a model law that applies only in states that have adopted it) caps a residential security deposit at two months' rent and expects it to be returned when the tenant hands back possession, less genuine dues or damage beyond normal wear and tear. Check whether your state has adopted it.",
+  "source": "Model Tenancy Act, 2021; state rent laws",
+  "verify": "Check state adoption"
+ },
+ {
+  "id": "RENT-REMEDY",
+  "topic": "rent",
+  "tags": [
+   "notice",
+   "suit",
+   "recovery",
+   "civil",
+   "refund",
+   "summary"
+  ],
+  "text": "The usual steps for an unreturned deposit are: (1) ask in writing, (2) send a legal notice giving a deadline (15 days is customary), (3) if unpaid, file a civil suit for recovery of money; where the claim rests on a written agreement, a summary suit under Order XXXVII of the Code of Civil Procedure, 1908 may be available. A consumer commission is generally not the right forum for a landlord-tenant deposit dispute. A local lawyer should confirm the forum before filing.",
+  "source": "Code of Civil Procedure, 1908, Order XXXVII; general practice",
+  "verify": "Lawyer to confirm forum"
+ },
+ {
+  "id": "LIMITATION-GEN",
+  "topic": "general",
+  "tags": [
+   "limitation",
+   "time",
+   "years",
+   "late",
+   "old",
+   "money"
+  ],
+  "text": "Under the Limitation Act, 1963, the general period to sue for recovery of money or on a contract is three years. A claim filed after the limitation period can be dismissed, so old claims need urgent attention.",
+  "source": "Limitation Act, 1963",
+  "verify": ""
+ },
+ {
+  "id": "WAGES",
+  "topic": "salary",
+  "tags": [
+   "salary",
+   "wages",
+   "employer",
+   "unpaid",
+   "labour",
+   "withheld",
+   "company"
+  ],
+  "text": "Employers must pay wages on time and may deduct only what the law allows. Wage law is now the Code on Wages, 2019, which came into force on 21 November 2025 and replaced the Payment of Wages Act, 1936 and other older wage laws. For monthly-paid employees wages are generally due by the 7th day of the next month. Rules and the complaint office can differ by state and by whether your employer falls under the central or the state government's sphere, so confirm locally. The usual first remedy is a written demand to the employer, then a complaint to the state Labour Commissioner or local labour office, which is free.",
+  "source": "Code on Wages, 2019 (in force 21 Nov 2025; Payment of Wages Act, 1936 repealed)",
+  "verify": "Confirm the 7th-day rule and the complaint office/time limit in your state's rules",
+  "checked": "2026-11-08: commencement and repeal confirmed against law-firm and SCC Online notes on the 21 Nov 2025 notifications; 7th-day rule NOT independently confirmed"
+ },
+ {
+  "id": "WAGES-PROOF",
+  "topic": "salary",
+  "tags": [
+   "proof",
+   "evidence",
+   "payslip",
+   "offer",
+   "letter",
+   "bank"
+  ],
+  "text": "Useful proof for unpaid salary: offer or appointment letter, payslips, bank statements showing past salary credits, emails or WhatsApp messages about the dues or the promise to pay, attendance records, and any resignation or termination letter.",
+  "source": "Practice guidance (not a statute)",
+  "verify": ""
+ },
+ {
+  "id": "GRATUITY",
+  "topic": "salary",
+  "tags": [
+   "gratuity",
+   "resign",
+   "terminated",
+   "five years",
+   "full and final"
+  ],
+  "text": "Gratuity is now governed by the Code on Social Security, 2020, in force from 21 November 2025, which replaced the Payment of Gratuity Act, 1972. It is generally payable after five years of continuous service (the Code also gives fixed-term employees gratuity after one year) and is due within 30 days once payable. Whether your employer is covered depends on establishment size and the rules; confirm this.",
+  "source": "Code on Social Security, 2020 (in force 21 Nov 2025; Payment of Gratuity Act, 1972 repealed)",
+  "verify": "Confirm 30-day payment period and coverage rules under the Code",
+  "checked": "2026-11-08: replacement of the 1972 Act and the fixed-term one-year rule seen in law-firm summaries; 30-day period NOT independently confirmed"
+ },
+ {
+  "id": "NI-138",
+  "topic": "cheque",
+  "tags": [
+   "cheque",
+   "bounce",
+   "dishonour",
+   "dishonoured",
+   "138",
+   "bank",
+   "memo"
+  ],
+  "text": "Section 138 of the Negotiable Instruments Act, 1881 (cheque dishonour) has strict deadlines: (1) send a written demand notice within 30 days of receiving the bank's cheque-return memo; (2) the person who issued the cheque gets 15 days from receiving the notice to pay; (3) if they do not pay, the complaint must be filed before a Magistrate within one month after that 15-day period ends. Missing a deadline can end the case. This is a criminal complaint; use a lawyer.",
+  "source": "Negotiable Instruments Act, 1881, s.138",
+  "verify": ""
+ },
+ {
+  "id": "CYBER",
+  "topic": "cyber",
+  "tags": [
+   "fraud",
+   "upi",
+   "scam",
+   "otp",
+   "cyber",
+   "online",
+   "hacked",
+   "money"
+  ],
+  "text": "For online or UPI fraud, act within hours: call 1930 (National Cyber Crime Helpline), report at cybercrime.gov.in, and inform your bank in writing. Quick reporting improves the chance of the receiving account being frozen. Keep screenshots, transaction IDs and the scammer's number or ID.",
+  "source": "Indian Cyber Crime Coordination Centre (I4C), MHA",
+  "verify": ""
+ },
+ {
+  "id": "FIR",
+  "topic": "police",
+  "tags": [
+   "police",
+   "fir",
+   "complaint",
+   "refuse",
+   "station"
+  ],
+  "text": "Police must register an FIR when told of a cognizable offence. Under the Bharatiya Nagarik Suraksha Sanhita, 2023 (which replaced the CrPC from 1 July 2024), information can be given orally or electronically. If the station refuses, a written complaint can be sent to the Superintendent of Police, and a Magistrate can be approached.",
+  "source": "Bharatiya Nagarik Suraksha Sanhita, 2023",
+  "verify": "Confirm section numbers before citing"
+ },
+ {
+  "id": "LEGAL-NOTICE-RECEIVED",
+  "topic": "notice",
+  "tags": [
+   "notice",
+   "received",
+   "reply",
+   "summons",
+   "court",
+   "ignore"
+  ],
+  "text": "If you receive a legal notice: do not ignore it. Note the date received and any deadline, read exactly what is claimed, keep the envelope or email, and reply in writing with your side of the facts before the deadline. A court summons is different from a notice; it carries a hearing date and should be shown to a lawyer immediately.",
+  "source": "Practice guidance (not a statute)",
+  "verify": ""
+ },
+ {
+  "id": "LEGAL-AID",
+  "topic": "general",
+  "tags": [
+   "lawyer",
+   "free",
+   "aid",
+   "afford",
+   "poor",
+   "dlsa",
+   "nalsa"
+  ],
+  "text": "Free legal aid is available under the Legal Services Authorities Act, 1987 to eligible groups, including women, children, SC/ST members, persons in custody and people below an income limit set by the state. Call NALSA on 15100 or visit the District Legal Services Authority (DLSA) at the district court.",
+  "source": "Legal Services Authorities Act, 1987; NALSA",
+  "verify": ""
+ },
+ {
+  "id": "EMERGENCY",
+  "topic": "safety",
+  "tags": [
+   "violence",
+   "threat",
+   "abuse",
+   "emergency"
+  ],
+  "text": "In an emergency call 112. Women facing violence can call the Women Helpline 181. For emotional distress, Tele-MANAS is available on 14416.",
+  "source": "Govt. of India helplines",
+  "verify": "Confirm numbers are active"
+ }
+]

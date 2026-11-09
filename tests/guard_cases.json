@@ -1,0 +1,196 @@
+[
+ {
+  "name": "IPC bare number",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "You can file a case under IPC 420 for cheating.",
+  "should_be_caught": true
+ },
+ {
+  "name": "BNS bare number",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "This is an offence under BNS 318 and you should go to police.",
+  "should_be_caught": true
+ },
+ {
+  "name": "u/s form",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "File a complaint u/s 420 of the penal code.",
+  "should_be_caught": true
+ },
+ {
+  "name": "Hindi statute name",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "आप भारतीय दंड संहिता के तहत मुकदमा कर सकते हैं।",
+  "should_be_caught": true
+ },
+ {
+  "name": "Hindi section",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "धारा 420 के तहत शिकायत करें।",
+  "should_be_caught": true
+ },
+ {
+  "name": "Act without year",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "The Rent Control Act gives you the right to claim double the deposit.",
+  "should_be_caught": true
+ },
+ {
+  "name": "Article of Constitution",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "Article 21 of the Constitution protects your right to shelter.",
+  "should_be_caught": true
+ },
+ {
+  "name": "NI Act shorthand",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "You can use the NI Act for this.",
+  "should_be_caught": true
+ },
+ {
+  "name": "Invented deadline, no citation",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "The landlord must return the deposit within 7 days by law.",
+  "should_be_caught": true
+ },
+ {
+  "name": "Real Act, wrong cap",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "The Model Tenancy Act, 2021 caps the deposit at six months' rent.",
+  "should_be_caught": true
+ },
+ {
+  "name": "Court decision without 'v.'",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "The Supreme Court decided this in the Vishaka matter and awarded interest.",
+  "should_be_caught": true
+ },
+ {
+  "name": "Section borrowed for wrong Act",
+  "ids": [
+   "RENT-DEPOSIT",
+   "LIMITATION-GEN"
+  ],
+  "text": "Section 69 of the Indian Contract Act lets you recover the money.",
+  "should_be_caught": true
+ },
+ {
+  "name": "Real section pinned to wrong Act",
+  "ids": [
+   "CPA-LIMIT",
+   "NI-138"
+  ],
+  "text": "Section 138 of the Consumer Protection Act, 2019 applies to your refund.",
+  "should_be_caught": true
+ },
+ {
+  "name": "Wrong year",
+  "ids": [
+   "CPA-LIMIT"
+  ],
+  "text": "The Consumer Protection Act, 1986 applies to this.",
+  "should_be_caught": true
+ },
+ {
+  "name": "Hinglish dhara",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "Aap police mein FIR kar sakte hain dhara 420 ke under.",
+  "should_be_caught": true
+ },
+ {
+  "name": "CPC order/rule",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "File under Order 7 Rule 11 CPC.",
+  "should_be_caught": true
+ },
+ {
+  "name": "Other code of procedure",
+  "ids": [
+   "RENT-REMEDY"
+  ],
+  "text": "You can also use the Code of Criminal Procedure, 1973 for this.",
+  "should_be_caught": true
+ },
+ {
+  "name": "Fake case citation",
+  "ids": [
+   "NI-138"
+  ],
+  "text": "See AIR 2011 SC 1234 for details.",
+  "should_be_caught": true
+ },
+ {
+  "name": "OK: cap sentence",
+  "ids": [
+   "RENT-DEPOSIT"
+  ],
+  "text": "Under the Model Tenancy Act, 2021 a deposit is capped at two months' rent [RENT-DEPOSIT].",
+  "should_be_caught": false
+ },
+ {
+  "name": "OK: 15-day notice + summary suit",
+  "ids": [
+   "RENT-REMEDY"
+  ],
+  "text": "Send a legal notice with a 15-day deadline, then a summary suit under Order XXXVII of the Code of Civil Procedure, 1908 may be available [RENT-REMEDY].",
+  "should_be_caught": false
+ },
+ {
+  "name": "OK: s.138 with its Act",
+  "ids": [
+   "NI-138"
+  ],
+  "text": "Section 138 of the Negotiable Instruments Act, 1881 gives you 30 days from the return memo to send a demand notice [NI-138].",
+  "should_be_caught": false
+ },
+ {
+  "name": "OK: limitation 2 years",
+  "ids": [
+   "CPA-LIMIT"
+  ],
+  "text": "Under Section 69 of the Consumer Protection Act, 2019 a complaint must normally be filed within two years [CPA-LIMIT].",
+  "should_be_caught": false
+ },
+ {
+  "name": "OK: labour code (2026 law)",
+  "ids": [
+   "WAGES"
+  ],
+  "text": "Wages are governed by the Code on Wages, 2019, which replaced the Payment of Wages Act, 1936 [WAGES].",
+  "should_be_caught": false
+ },
+ {
+  "name": "OK: repealed Act NOT treated as current is a KB job, guard only checks traceability",
+  "ids": [
+   "GRATUITY"
+  ],
+  "text": "Gratuity is now under the Code on Social Security, 2020 [GRATUITY].",
+  "should_be_caught": false
+ }
+]

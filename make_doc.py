@@ -1,0 +1,38 @@
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.styles import ParagraphStyle
+from reportlab.lib.units import mm
+from reportlab.lib import colors
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+H = ParagraphStyle("h", fontName="Helvetica-Bold", fontSize=11, spaceBefore=8, spaceAfter=2, textColor=colors.HexColor("#1a3a5c"))
+B = ParagraphStyle("b", fontName="Helvetica", fontSize=9.6, leading=12.4, spaceAfter=2.5)
+T = ParagraphStyle("t", fontName="Helvetica-Bold", fontSize=15, spaceAfter=2)
+S = ParagraphStyle("s", fontName="Helvetica", fontSize=8, textColor=colors.grey, spaceAfter=3)
+C = ParagraphStyle("c", fontName="Helvetica", fontSize=7.4, leading=9)
+def bl(items): return [Paragraph("&bull; " + i, B) for i in items]
+st = [Paragraph("Nyaya Saathi: AI legal first-aid for India (Problem 2)", T),
+      Paragraph("[YOUR NAME] &middot; [ROLL NO] &middot; [BRANCH] &nbsp;|&nbsp; Prototype: [LINK] &nbsp;|&nbsp; Raw outputs: [LINK] &nbsp;|&nbsp; Video: [LINK]", S),
+ Paragraph("1. Why this problem, and what I assumed", H),
+ Paragraph("A confident wrong answer about law can cost someone their deposit or their deadline, so <b>refusal design and checkable output</b> are the product, not fluent text. I built for a first-time, non-lawyer user typing English, Hindi or Hinglish. <b>Assumptions (brief was silent):</b>", B)] + bl([
+ "<b>Scope = six everyday problems:</b> security deposit, consumer refund, unpaid salary, bounced cheque, online/UPI fraud, notice received. Family, criminal defence, property/builder, inheritance, tax, insurance, PF, job termination, harassment and loans between friends are referred, not answered.",
+ "<b>Law as of 8 Nov 2026</b> from a hand-curated KB of 18 entries, each with a source. Three entries were re-checked on the web on 8 Nov (labour codes in force from 21 Nov 2025 and the old Wages and Gratuity Acts repealed; e-Jagriti replaced e-Daakhil on 1 Jan 2025; nil fee up to Rs 5 lakh). The other entries are from memory and carry a 'verify' flag where unsure; a lawyer must review them before real use.",
+ "First-aid only: understand, prepare, route. No representation, no prediction of who wins. Text only; voice would be a speech-to-text layer in front (not built)."]) + [
+ Paragraph("2. How it works: what is code, what is AI, where a human sits", H),
+ Paragraph("Per message: (1) <b>Triage in code</b>: language, category (whole-word keywords), red flags (arrest, violence, blackmail, self-harm, eviction, criminal threat, user is on the other side), amount, limitation clue, and <b>deadline arithmetic</b> for cheques (30 days from the return memo, computed from a date or '40 days ago'). "
+           "(2) <b>Retrieval in code</b>: the KB entries for that category; the model never chooses the law. (3) <b>LLM only phrases</b> the answer from that context with [TAGS], and extracts a case file (what/when/proof). (4) <b>Guard in code</b> deletes unsupported sentences (section 3). (5) <b>Templates</b> give a notice draft with [BRACKETS] for unknown facts, plus a role-play prompt (AI plays landlord/HR/seller). "
+           "Self-harm returns a fixed crisis message only, with no case advice. Out-of-scope and red-flag cases put 'see a lawyer / NALSA 15100' first and suppress the notice. The model is one function (<font name='Courier'>call_llm</font>, env vars) so Gemini, Claude or any OpenAI-compatible API can be swapped; on any error it falls back to offline mode. <b>Human:</b> a lawyer reviews KB entries and sampled chats.", B),
+ Paragraph("3. How it avoids inventing law", H),
+ Paragraph("The prompt is closed-world (CONTEXT only), then a guard removes any sentence that fails one of six checks: unknown Act (with or without a year; wrong year caught), section/article/rule numbers and Section-to-Act pairing, bare abbreviations (IPC, BNS, CrPC, NI Act), courts and case names, Hindi statute words not mapped to a KB Act, and <b>duration figures</b> ('7 days', 'six months') not found in the KB or the user's own words. "
+           "<b>Limit:</b> a wrong fact with no number or name (e.g. 'the owner must be reached first') passes, and a figure the user mentioned can be repeated back wrongly. So KB review is the real control and the guard is the safety net.", B),
+ Paragraph("4. Scale and cost", H),
+ Paragraph("Offline mode is free. LLM mode is 2 calls per turn, about 3k tokens in and 1k out (my estimate, not measured), a small fraction of a rupee on a small model; verify with real usage. To scale: per-state KB records with owner and 'last verified' date; embedding retrieval; lawyer review of new entries and a weekly 2% chat sample; the test files run as a release gate on every KB or model change. A new problem type is one dictionary entry plus 3&ndash;5 tests.", B),
+ Paragraph("5. How I know it works, and where it fails", H),
+ Paragraph("My first version passed its own 20 tests, which proved little because I wrote both. So I audited it with inputs it had never seen:", B)] + bl([
+ "<b>Guard audit:</b> 15 adversarial sentences (bare 'IPC 420', 'u/s 420', Hindi Act name, 'Rent Control Act', 'Article 21', a court case without 'v.', 'within 7 days by law', 'six months' rent'). The first guard caught <b>3 of 15</b>. After the rewrite: 18/18 adversarial caught and 6/6 legitimate sentences kept (24-case suite, plus a realistic mock model answer lost 0 sentences).",
+ "<b>30 fresh messy inputs</b> found: PF dispute routed to the deposit flow ('depositing' contains 'deposit'); '4 years 8 months' read as <b>Rs 8</b> ('years 8'); no cheque deadline maths at all (a memo 45 days old got no warning); a self-harm message got the full salary advice and 'do you have an offer letter?'; blackmail not escalated; a landlord chasing unpaid rent got tenant advice; a legal threat labelled 'violence'; the violence and out-of-scope path lacked the 181/112 helplines; <b>labour law presented as pre-2025</b>.",
+ "<b>Held-out round</b> (12 new inputs, written before fixing): about 6 handled well, 3 failed safe ('cannot tell, tell me more'), <b>3 unsafe</b> (two criminal threats not escalated, a rent increase given deposit advice). Fixed and added as tests.",
+ "Now: 43/43 triage cases and 25/25 guard probes pass offline (raw files in outputs/; run date pinned for deadline tests). <b>Caveat:</b> the later cases were written after seeing failures, so this is regression safety, not a generalisation score."]) + [
+ Paragraph("<b>Still fails:</b> keyword triage misses new phrasings (PG 'advance', 'last month's pay' fall to 'cannot tell', which fails safe) and picks one problem when several are mixed; a bare '20000' with no currency word is not read as an amount; offline Hindi covers headings only; the chat re-analyses the user's messages but the model never sees its own earlier replies; notice templates are not state-specific; no voice. "
+           "<b>LLM-mode outputs: [ADD: I ran it with ______ on ___ and found ______]</b>.", B),
+ Paragraph("6. Tools used, and where they got it wrong", H),
+ Paragraph("Claude (design, code, KB drafting), a second pass of Claude plus web search for the audit and fact-checks, Streamlit for the UI. <b>Where the AI got it wrong:</b> it wrote the guard and the tests together, then reported 20/20 and a 'four-layer' defence; my audit showed the guard missed most evasions, the self-harm claim in the draft doc was not what the code did, and its KB cited the repealed Payment of Wages Act and Gratuity Act as live law. [REWRITE in your own words.]", B)]
+SimpleDocTemplate("/home/claude/nyaya/solution_doc.pdf", pagesize=A4, leftMargin=14*mm, rightMargin=14*mm, topMargin=11*mm, bottomMargin=10*mm).build(st)

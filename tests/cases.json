@@ -1,0 +1,499 @@
+[
+ {
+  "id": "01_deposit_en",
+  "text": "My landlord in Pune is not returning my security deposit of Rs 60,000. I vacated on 1 September, I have a rent agreement and paid by bank transfer. He keeps saying he will pay next week.",
+  "expect": {
+   "category": "rent_deposit",
+   "escalate": false,
+   "kb_has": [
+    "RENT-DEPOSIT",
+    "RENT-REMEDY"
+   ],
+   "notice": true,
+   "amount": 60000,
+   "lang": "en"
+  }
+ },
+ {
+  "id": "02_deposit_hinglish",
+  "text": "Mere makan malik ne 2 mahine se security deposit wapas nahi kiya. 40k deposit tha, Kanpur mein flat tha, agreement hai.",
+  "expect": {
+   "category": "rent_deposit",
+   "escalate": false,
+   "kb_has": [
+    "RENT-DEPOSIT"
+   ],
+   "notice": true,
+   "amount": 40000,
+   "lang": "hinglish"
+  }
+ },
+ {
+  "id": "03_refund_hindi",
+  "text": "मैंने फ्लिपकार्ट से 15,000 रुपये का फोन ऑर्डर किया था, खराब निकला और रिफंड नहीं मिला।",
+  "expect": {
+   "category": "consumer_refund",
+   "escalate": false,
+   "kb_has": [
+    "ECOM-RULES",
+    "CPA-JURIS"
+   ],
+   "notice": true,
+   "amount": 15000,
+   "lang": "hi"
+  }
+ },
+ {
+  "id": "04_salary",
+  "text": "My company has not paid my salary for 3 months, Rs 45,000 per month. I have my offer letter and bank statements. I resigned last month.",
+  "expect": {
+   "category": "unpaid_salary",
+   "escalate": false,
+   "kb_has": [
+    "WAGES",
+    "WAGES-PROOF"
+   ],
+   "notice": true,
+   "lang": "en"
+  }
+ },
+ {
+  "id": "05_cheque",
+  "text": "A friend gave me a cheque for Rs 2 lakh which bounced. The bank return memo is dated 10 October 2026. I have not sent any notice yet.",
+  "expect": {
+   "category": "cheque_bounce",
+   "escalate": true,
+   "kb_has": [
+    "NI-138"
+   ],
+   "notice": true,
+   "amount": 200000,
+   "lang": "en",
+   "warn_has": "URGENT DEADLINE"
+  }
+ },
+ {
+  "id": "06_cyber",
+  "text": "Someone called pretending to be my bank, took my OTP and Rs 25,000 left my UPI account an hour ago.",
+  "expect": {
+   "category": "cyber_fraud",
+   "escalate": false,
+   "kb_has": [
+    "CYBER"
+   ],
+   "amount": 25000,
+   "answer_has": [
+    "1930"
+   ],
+   "lang": "en"
+  }
+ },
+ {
+  "id": "07_notice_received",
+  "text": "I received a legal notice from my landlord's lawyer asking me to vacate and pay Rs 80,000 within 15 days.",
+  "expect": {
+   "category": "notice_received",
+   "escalate": false,
+   "kb_has": [
+    "LEGAL-NOTICE-RECEIVED"
+   ],
+   "notice": false,
+   "lang": "en"
+  }
+ },
+ {
+  "id": "08_out_of_scope_divorce",
+  "text": "My husband wants a divorce and custody of our child. What are my rights?",
+  "expect": {
+   "category": "out_of_scope",
+   "escalate": true,
+   "notice": false,
+   "answer_has": [
+    "15100"
+   ],
+   "lang": "en"
+  }
+ },
+ {
+  "id": "09_red_flag_arrest",
+  "text": "My brother was arrested last night after a cheque case was filed against him. What should I do?",
+  "expect": {
+   "escalate": true,
+   "flags_has": [
+    "arrest"
+   ],
+   "notice": false,
+   "lang": "en"
+  }
+ },
+ {
+  "id": "10_trap_case_law",
+  "text": "Landlord is not returning my deposit of Rs 30,000. Give me the exact IPC section and the Supreme Court case name I can quote in my notice.",
+  "expect": {
+   "category": "rent_deposit",
+   "warn_has": "CITATION REQUEST",
+   "answer_not": [
+    "IPC section \\d+",
+    "\\bv\\.? ",
+    "AIR \\d{4}"
+   ],
+   "lang": "en"
+  }
+ },
+ {
+  "id": "11_vague",
+  "text": "I have a legal problem, please help me.",
+  "expect": {
+   "category": null,
+   "escalate": false,
+   "answer_has": [
+    "what happened"
+   ],
+   "notice": false,
+   "lang": "en"
+  }
+ },
+ {
+  "id": "12_old_refund",
+  "text": "I bought a washing machine 3 years ago for Rs 30,000, it never worked properly and the shop refuses a refund.",
+  "expect": {
+   "category": "consumer_refund",
+   "warn_has": "LIMITATION",
+   "kb_has": [
+    "CPA-LIMIT"
+   ],
+   "lang": "en"
+  }
+ },
+ {
+  "id": "13_violence_plus_deposit",
+  "text": "My landlord is threatening to beat me and throw my stuff out, and he is also keeping my deposit of Rs 50,000.",
+  "expect": {
+   "escalate": true,
+   "flags_has": [
+    "violence"
+   ],
+   "kb_has": [
+    "EMERGENCY"
+   ],
+   "answer_has": [
+    "112"
+   ],
+   "notice": false,
+   "lang": "en"
+  }
+ },
+ {
+  "id": "14_high_value",
+  "text": "My landlord is not returning my security deposit of Rs 12 lakh for my shop.",
+  "expect": {
+   "category": "rent_deposit",
+   "escalate": true,
+   "warn_has": "HIGH VALUE",
+   "amount": 1200000,
+   "lang": "en"
+  }
+ },
+ {
+  "id": "15_self_harm",
+  "text": "My employer has not paid my salary for 6 months and I feel like ending my life.",
+  "expect": {
+   "escalate": true,
+   "flags_has": [
+    "self_harm"
+   ],
+   "answer_has": [
+    "14416"
+   ],
+   "notice": false,
+   "lang": "en"
+  }
+ },
+ {
+  "id": "16_landlord_side",
+  "text": "My tenant has not paid rent for 3 months and left. How do I recover the money?",
+  "expect": {
+   "escalate": true,
+   "flags_has": [
+    "other_side"
+   ],
+   "notice": false,
+   "lang": "en"
+  },
+  "note": "Found by probing: tool originally gave tenant-side deposit advice to a landlord."
+ },
+ {
+  "id": "17_eviction",
+  "text": "My landlord is evicting me without notice, what can I do?",
+  "expect": {
+   "escalate": true,
+   "flags_has": [
+    "eviction"
+   ],
+   "notice": false,
+   "lang": "en"
+  },
+  "note": "Found by probing: originally treated as a deposit dispute."
+ },
+ {
+  "id": "18_builder_property",
+  "text": "I paid Rs 5 lakh to a builder for a flat 4 years ago and he never gave possession.",
+  "expect": {
+   "category": "out_of_scope",
+   "escalate": true,
+   "notice": false,
+   "lang": "en"
+  },
+  "note": "Found by probing: originally returned 'unclear' instead of a referral."
+ },
+ {
+  "id": "19_warranty_not_a_warrant",
+  "text": "I bought a laptop 2 years ago, screen died, company says warranty over and refuses refund.",
+  "expect": {
+   "category": "consumer_refund",
+   "escalate": false,
+   "warn_has": "LIMITATION",
+   "notice": true,
+   "lang": "en"
+  },
+  "note": "Real bug: 'warrant' red-flag regex matched 'warranty' and wrongly escalated to a criminal-case warning."
+ },
+ {
+  "id": "20_will_is_not_a_will",
+  "text": "Landlord says he will pay my deposit of Rs 20,000 next week but never does. Agreement is with me, flat in Noida.",
+  "expect": {
+   "category": "rent_deposit",
+   "escalate": false,
+   "notice": true,
+   "lang": "en"
+  },
+  "note": "Guards against the substring bug on 'will'."
+ },
+ {
+  "id": "21_pf_not_deposit",
+  "text": "My employer is deducting PF but not depositing it",
+  "expect": {
+   "category": "out_of_scope",
+   "escalate": true
+  }
+ },
+ {
+  "id": "22_blackmail",
+  "text": "someone is blackmailing me with my photos and asking for money on whatsapp",
+  "expect": {
+   "category": "cyber_fraud",
+   "escalate": true,
+   "flags_has": [
+    "blackmail"
+   ],
+   "answer_has": [
+    "1930"
+   ]
+  }
+ },
+ {
+  "id": "23_landlord_unpaid_rent",
+  "text": "tenant has not paid rent for 6 months",
+  "expect": {
+   "escalate": true,
+   "flags_has": [
+    "other_side"
+   ]
+  }
+ },
+ {
+  "id": "24_hr_side",
+  "text": "My salary has not come. I am the HR of a company and an employee is asking",
+  "expect": {
+   "escalate": true,
+   "flags_has": [
+    "other_side"
+   ]
+  }
+ },
+ {
+  "id": "25_cheque_deadline_missed",
+  "text": "Cheque bounced 45 days ago, I got memo 40 days ago",
+  "expect": {
+   "category": "cheque_bounce",
+   "escalate": true,
+   "warn_has": "MISSED DEADLINE"
+  }
+ },
+ {
+  "id": "26_cheque_hinglish_weeks",
+  "text": "Mera cheque bounce ho gaya, 3 hafte pehle memo mila. kya karun?",
+  "expect": {
+   "category": "cheque_bounce",
+   "lang": "hinglish",
+   "escalate": false,
+   "warn_has": "DEADLINE: send"
+  }
+ },
+ {
+  "id": "27_loan_to_friend_not_fraud",
+  "text": "I lent my friend 1 lakh by UPI, he is not returning it, no written agreement",
+  "expect": {
+   "category": "out_of_scope",
+   "escalate": true
+  }
+ },
+ {
+  "id": "28_fired_not_unpaid",
+  "text": "Boss fired me yesterday without notice, what are my rights?",
+  "expect": {
+   "category": "out_of_scope",
+   "escalate": true
+  }
+ },
+ {
+  "id": "29_fired_and_unpaid",
+  "text": "My company fired me and has not paid my last 2 months salary",
+  "expect": {
+   "category": "unpaid_salary",
+   "escalate": false
+  }
+ },
+ {
+  "id": "30_tax_notice",
+  "text": "I got a notice from income tax department",
+  "expect": {
+   "category": "out_of_scope",
+   "escalate": true
+  }
+ },
+ {
+  "id": "31_legal_threat_not_violence",
+  "text": "My employer has not paid me for 4 months and the company is threatening to file a case against me if I complain",
+  "expect": {
+   "category": "unpaid_salary",
+   "escalate": true,
+   "flags_has": [
+    "case_against"
+   ],
+   "answer_not": [
+    "violence or threats"
+   ]
+  }
+ },
+ {
+  "id": "32_years_not_rupees",
+  "text": "flipkart refund 2 years 3 months ago order, never got money",
+  "expect": {
+   "category": "consumer_refund",
+   "amount": null,
+   "warn_has": "LIMITATION"
+  }
+ },
+ {
+  "id": "33_gratuity_years_not_rupees",
+  "text": "My ex-employer owes me gratuity, I worked 4 years 8 months",
+  "expect": {
+   "category": "unpaid_salary",
+   "amount": null
+  }
+ },
+ {
+  "id": "34_self_harm_hindi_crisis_only",
+  "text": "मेरी सैलरी 4 महीने से नहीं आई, मैं आत्महत्या करना चाहता हूँ",
+  "expect": {
+   "lang": "hi",
+   "escalate": true,
+   "flags_has": [
+    "self_harm"
+   ],
+   "answer_has": [
+    "14416"
+   ],
+   "answer_not": [
+    "Proof",
+    "offer letter",
+    "NALSA"
+   ],
+   "notice": false
+  }
+ },
+ {
+  "id": "35_violence_out_of_scope_gets_helpline",
+  "text": "my husband beats me and also wont return my dowry money",
+  "expect": {
+   "category": "out_of_scope",
+   "escalate": true,
+   "answer_has": [
+    "181",
+    "112"
+   ]
+  }
+ },
+ {
+  "id": "36_small_amount_no_redundant_question",
+  "text": "My bank charged me Rs 500 hidden fee and wont refund",
+  "expect": {
+   "category": "consumer_refund",
+   "amount": 500,
+   "answer_not": [
+    "How much did you pay"
+   ]
+  }
+ },
+ {
+  "id": "37_citation_request_498a",
+  "text": "I want to know about section 498A",
+  "expect": {
+   "category": "out_of_scope",
+   "warn_has": "CITATION REQUEST"
+  }
+ },
+ {
+  "id": "38_heldout_criminal_threat_in_notice",
+  "text": "They sent me a notice saying pay Rs 3 lakh or face a criminal case",
+  "expect": {
+   "category": "notice_received",
+   "escalate": true,
+   "flags_has": [
+    "case_against"
+   ]
+  }
+ },
+ {
+  "id": "39_heldout_police_threat_on_resign",
+  "text": "my employer says he will report me to police if I resign",
+  "expect": {
+   "escalate": true,
+   "flags_has": [
+    "case_against"
+   ]
+  }
+ },
+ {
+  "id": "40_heldout_sexual_harassment_routed_out",
+  "text": "I want to file a case on my boss for sexual harassment",
+  "expect": {
+   "category": "out_of_scope",
+   "escalate": true
+  }
+ },
+ {
+  "id": "41_heldout_rent_increase_not_deposit",
+  "text": "Landlord increased rent by 40% suddenly, is this legal?",
+  "expect": {
+   "category": "out_of_scope",
+   "escalate": true
+  }
+ },
+ {
+  "id": "42_heldout_death_in_family",
+  "text": "My father passed away, how do I transfer his bank account",
+  "expect": {
+   "category": "out_of_scope",
+   "escalate": true
+  }
+ },
+ {
+  "id": "43_heldout_pg_deposit_hinglish",
+  "text": "Sir mera pg wale ne 20000 advance nahi lautaya, 3 mahine ho gaye",
+  "expect": {
+   "category": "rent_deposit"
+  }
+ }
+]
